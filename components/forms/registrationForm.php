@@ -17,6 +17,7 @@
           </div>
           <div class="mb-3">
             <label for="regEmail" class="form-label"><i class="fa-solid fa-envelope"></i> Email</label>
+            <small id="emailMsg"></small>
             <input type="email" class="form-control" id="regEmail" name="email" required>
           </div>
           <div class="mb-3">

@@ -26,8 +26,9 @@
     
       </div>
       <div class="modal-footer custom-reg-form ">
+        <span id="logMsg"></span>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-        <button id="stuLogBtn" type="submit" class="btn btn-success">LogIn </button>
+        <button id="stuLogBtn" onclick="stuLogIn()" type="submit" class="btn btn-success">LogIn </button>
       </div>
     </div>
   </div>
