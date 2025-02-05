@@ -10,39 +10,39 @@
 </head>
 <body>
     <!-- navbar start from here -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary nav-light border-bottom border-light bg-dark fixed-top  ">
+    <nav class="navbar navbar-expand-lg nav-light border-bottom border-light fixed-top " style="background-color:rgb(224, 225, 225); ">
     <div class="container-fluid">
-    <a class="navbar-brand px-5" href="#">
-        <span class="learn-text">LEARN</span><span class="code-text">CODE</span>
-</a>
+        <a class="navbar-brand px-5" href="#">
+            <span class="learn-text">LEARN</span><span class="code-text">CODE</span>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-theme="white">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-6 pe-4">
                 <li class="nav-item pe-3.5">
-                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.php" style="font-weight: bold; ">Home</a>
                 </li>
                 <li class="nav-item pe-4">
-                    <a class="nav-link" href="#">Courses</a>
+                    <a class="nav-link" href="courses.php" style="font-weight: bold; ">Courses</a>
                 </li>
                 <li class="nav-item pe-4">
-                    <a class="nav-link" href="#">PymentStatus</a>
+                    <a class="nav-link" href="paymentStatus.php" style="font-weight: bold;">PaymentStatus</a>
                 </li>
                 <li class="nav-item pe-4">
-                    <a class="nav-link " href="#">MyProfile</a>
+                    <a class="nav-link" href="#" style="font-weight: bold;">MyProfile</a>
                 </li>
                 <li class="nav-item pe-4">
-                    <a class="nav-link" href="#">FeedBack</a>
+                    <a class="nav-link" href="#" style="font-weight: bold; ">FeedBack</a>
                 </li>
                 <li class="nav-item pe-4">
-                    <a class="nav-link" href="#">LogIn</a>
+                    <a class="nav-link btn" data-bs-toggle="modal" data-bs-target="#LogInModal" href="#" style="font-weight: bold; ">LogIn</a>
                 </li>
                 <li class="nav-item pe-4">
-                    <a class="nav-link" href="#">SignUp</a>
+                    <a class="nav-link btn" data-bs-toggle="modal" data-bs-target="#RegistrationModal" href="#" style="font-weight: bold; ">SignUp</a>
                 </li>
                 <li class="nav-item pe-4">
-                    <a class="nav-link" href="#">LogOut</a>
+                    <a class="nav-link" href="#" style="font-weight: bold; ">LogOut</a>
                 </li>
             </ul>
         </div>
@@ -51,6 +51,7 @@
 
 <!-- end navbar -->
 
+     <!-- end navbar here -->
 <!-- start nav top contant -->
 <div class="container-fluid remove-vid-m  mb-0" >
         <div class="video-parrent">
@@ -63,12 +64,11 @@
                 <h1 class="my-contant fs-1">Welcome to <span class="learn-text">LEARN</span><span class="code-text">CODE</span></h1>
                 <h6 class="my-contant">Learn and Implement</h6>
                 <!-- <a href="http://" class="btn btn-danger mt-2">Get-Started</a> -->
-                <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#RegistrationModal">
                 Get-Started
 </button>
         </div>
-</div>
-<!-- end nav top contant -->   
+</div><!-- end nav top contant -->    
  
 <!-- start text banner -->
  <div class="container-fluid bg-danger txt-banner mt-0 mb-0 banner">
@@ -266,51 +266,9 @@
 <!-- end slider of user feedback -->
 
 <!-- start footer -->
-<footer class="bg-dark text-white mt-5 p-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 order-md-2">
-                <h5>Quick Links</h5>
-                <ul class="list-unstyled ">
-                    <li><a href="#" class="text-white quick-link">Home</a></li>
-                    <li><a href="#" class="text-white quick-link">Courses</a></li>
-                    <li><a href="#" class="text-white quick-link">Payment Status</a></li>
-                    <li><a href="#" class="text-white quick-link">My Profile</a></li>
-                    <li><a href="#" class="text-white quick-link">Feedback</a></li>
-                    <li><a href="#" class="text-white quick-link">Login</a></li>
-                    <li><a href="#" class="text-white quick-link">Sign Up</a></li>
-                    <li><a href="#" class="text-white quick-link">Logout</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 order-md-1">
-                <h3>About <span class="learn-text">LEARN</span><span class="code-text">CODE</span></h3>
-                <p>LearnCode is a leading online learning platform offering a wide range of courses in web development, data science, mobile app development, and more. Our mission is to provide high-quality education to learners around the world.</p>
-            </div>
-            <div class="col-md-4 order-md-3">
-                <h5>Contact Us</h5>
-                <p>Near IIIT, Chowk Prayagraj, Uttar Pradesh-211005</p>
-                <p>Phone: 8429870248</p>
-                <p>Email: support@learncode.com</p>
-                <div>
-                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col text-center">
-                <p>&copy; 2023 LearnCode. All Rights Reserved.</p>
-                <p>
-                    <a href="#" class="text-white me-3">Privacy Policy</a>
-                    <a href="#" class="text-white me-3">Terms of Service</a>
-                    <a href="#" class="text-white">Contact Us</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+<?php
+require("components/footer.php");
+?>
 <!-- end footer -->
 
 <!-- registration forms model started here -->
@@ -318,6 +276,22 @@
 
 
 <!-- Modal -->
+<?php
+require("components/forms/registrationForm.php");
+?>
+
+
+<?php
+require("components/forms/logInForm.php");
+?>
+
+
+
+<?php
+require("components/forms/adminLogInForm.php");
+?>
+
+
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -340,8 +314,10 @@
 
 
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/proper.min.js"></script>
 <script src="js/all.min.js"></script>
+<script src="js/ajaxRequest.js"></script>
 
 </body>
 </html>
