@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg nav-light border-bottom border-light fixed-top " style="background-color:rgb(224, 225, 225); ">
+<nav class="navbar navbar-expand-lg nav-light border-bottom border-light  " >
     <div class="container-fluid">
         <a class="navbar-brand px-5" href="#">
             <span class="learn-text">LEARN</span><span class="code-text">CODE</span>

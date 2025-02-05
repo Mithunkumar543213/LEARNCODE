@@ -1,7 +1,6 @@
 <div class="container mt-3">
     <h1 class="text-center mb-4">Our Courses</h1>
     <div class="row">
-
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100 shadow-sm border-0">
                 <img src="images/Full stack_web_dev.jpg" class="card-img-top img-fluid p-0" alt="Course 1" style="height: 250px; object-fit: contain;">

@@ -13,7 +13,7 @@
         <form action="register.php" method="post" class="p-4 rounded custom-reg-form">
           <div class="mb-3">
             <label for="regName" class="form-label"><i class="fas fa-users mr-3"></i> Name</label>
-            <input type="text" class="form-control bg-tertiary" id="regName" name="name" required>
+            <input type="text" class="form-control bg-tertiary" id="regName" name="stuName" required>
           </div>
           <div class="mb-3">
             <label for="regEmail" class="form-label"><i class="fa-solid fa-envelope"></i> Email</label>
@@ -31,7 +31,7 @@
         <!-- registration form end here -->
       </div>
       <div class="modal-footer custom-reg-form">
-        <span id="Message"></span>
+        <span id="successMsg"></span>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         <button onclick="regDataHandaling()" id="stuRegBtn" type="submit" class="btn btn-success">Register</button>
       </div>

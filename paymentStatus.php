@@ -24,13 +24,30 @@
     <div class="vid-contant text-center">
         <h1 class="my-contant fs-1">Welcome to <span class="learn-text">LEARN</span><span class="code-text">CODE</span></h1>
         <h6 class="my-contant">Learn and Implement</h6>
-        <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#RegistrationModal">Get-Started</button>
+        
     </div>
 </div>
 
+<div class="container mt-5">
+    <h2 class="text-center">Check Payment Status</h2>
+    <form action="checkPaymentStatus.php" method="post" class="mt-4">
+        <div class="form-group row justify-content-center">
+            <div class="col-sm-6">
+                <label for="inputPassword6" class="col-form-label">Payment ID:</label>
+                <input type="password" id="inputPassword6" name="password" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+        </div>
+        <div class="form-group row justify-content-center mt-3">
+            <div class="col-sm-6 text-center">
+                <button type="submit" class="btn btn-primary">Check Status</button>
+            </div>
+        </div>
+    </form>
+</div>
 
 <?php
-require("components/courses.php");
+require("components/contactUs.php");
+
 ?>
 
 <?php
