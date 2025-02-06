@@ -19,13 +19,14 @@
             <input type="password" class="form-control" id="adminlogPassword" name="adminlogpassword" required>
           </div>
           <div class="d-grid">
-            <button id="adminLogBtn" type="submit" class="btn btn-primary">LogIn</button>
+            <button onclick="adminLogInCheck()" id="adminLogBtn"  class="btn btn-primary">LogIn</button>
           </div>
         </form>
         <!-- admin login form end here -->
       </div>
       <div class="modal-footer custom-reg-form">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <span id="adminMsg"></span>
+        <button type="button"  class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
       </div>
     </div>
   </div>

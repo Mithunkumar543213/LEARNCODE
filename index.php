@@ -24,14 +24,30 @@
                 </video>
                 <div class="video-overlay"></div>
         </div>
-        <div class="vid-contant">
+        <?php
+         
+        if (!isset($_SESSION['is_login'])) {
+            echo ' <div class="vid-contant">
                 <h1 class="my-contant fs-1">Welcome to <span class="learn-text">LEARN</span><span class="code-text">CODE</span></h1>
                 <h6 class="my-contant">Learn and Implement</h6>
                 <!-- <a href="http://" class="btn btn-danger mt-2">Get-Started</a> -->
                 <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#RegistrationModal">
                 Get-Started
-</button>
-        </div>
+                 </button>
+        </div>';
+        } else {
+            echo ' <div class="vid-contant">
+                <h1 class="my-contant fs-1">Welcome to <span class="learn-text">LEARN</span><span class="code-text">CODE</span></h1>
+                <h6 class="my-contant">Learn and Implement</h6>
+                <!-- <a href="http://" class="btn btn-danger mt-2">Get-Started</a> -->
+                <button type="button" class="btn btn-info mt-2" ">
+                My Profile
+                 </button>
+        </div>  ';
+        }
+            
+        
+        ?>
 </div><!-- end nav top contant -->    
  
 <!-- start text banner -->
@@ -111,6 +127,7 @@ require("components/forms/adminLogInForm.php");
 <script src="js/proper.min.js"></script>
 <script src="js/all.min.js"></script>
 <script src="js/ajaxRequest.js"></script>
+<script src="js/adminAjaxRequest.js"></script>
 
 </body>
 </html>

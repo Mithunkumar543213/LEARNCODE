@@ -19,6 +19,20 @@
     font-size: 2rem;
 }
 
+.text-container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Full viewport height */
+    text-align: center;       /* Ensures text alignment */
+}
+
+.extra-large-text {
+    font-size: 4rem !important; /* Extra-large text */
+    font-weight: 900; /* Bold text */
+    text-transform: uppercase; /* Optional */
+}
+
 .code-text {
     color:rgb(20, 114, 214); /* Blue color for "Code" */
     font-weight: bold;
@@ -65,10 +79,11 @@ video{
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
-.vid-contant{
+.vid-contant {
     position: absolute;
-    top: 35%;
-    left: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Moves the element back by 50% of its own width & height */
     z-index: 2;
     text-align: center;
 }
