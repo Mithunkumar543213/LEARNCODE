@@ -11,12 +11,13 @@ $(document).ready(function () {
             },
             success: function (data) {
                 //console.log(data);
-                if(data!=0){
-                    $("#emailMsg").html("<small style='color:red;'>Email already exists!</small>");
-                    $("#stuRegBtn").attr("disabled", true);
-                } else if(data==0 && validateEmail(stuemail)){
+                if(data==0 && validateEmail(email)){
                     $("#emailMsg").html("<span style='color:green;'>Email available</span>");
                     $("#stuRegBtn").attr("disabled", false);
+                } 
+                 else if(data!=0){
+                    $("#emailMsg").html("<small style='color:red;'>Email already exists!</small>");
+                    $("#stuRegBtn").attr("disabled", true);
                 } 
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -93,6 +94,8 @@ function validateEmail(email) {
     return regex.test(email);
 }
 
+
+
 //Ajax call for student login verification
 function stuLogIn(){
     let stuLogEmail = $("#logEmail").val().trim();
@@ -119,10 +122,18 @@ function stuLogIn(){
             if (data.error == "Invalid") {
                 $("#logMsg").html("<span class='alert alert-danger'>Invalid email or password!</span>");
             } else if (data.status == "OK") {
-                $("#logMsg").html("<span class='alert alert-success'>Login Successful</span>");
-                window.location.href = "index.php";
-            }else if (data.error=="Fill All Field") {
-                $("#logMsg").html("<span class='alert alert-danger'> Fill All Field</span>");
+                console.log(data.status)
+                $("#logMsg").html("<span class='spinner-border text-success'></span>");
+                setTimeout(() => {
+                    window.location.href = "courses.php";
+                }, 500);
+                
+            }else if (data.status=="Not found") {
+                $("#logMsg").html("<span class='alert alert-danger'> User Not Found</span>");
+
+            }
+            else if (data.error=="Fill All Field") {
+                $("#logMsg").html("<span class='alert alert-danger'> Fill All Require</span>");
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {

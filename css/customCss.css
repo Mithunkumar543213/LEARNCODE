@@ -101,7 +101,11 @@ video{
     .my-contant
 {
     display: none;
-}}
+}
+.navbar-nav .nav-link {
+    color: rgb(25, 24, 24) !important; /* Change text color */
+}
+}
 
 
     

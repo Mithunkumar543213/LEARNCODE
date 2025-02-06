@@ -1,4 +1,10 @@
 <?php
+header('Content-Type: application/json'); 
+
+if(!isset($_SESSION)){
+    session_start();
+}
+
 include_once('../dbConnection.php');
 
 header('Content-Type: application/json'); // Ensure JSON output
@@ -55,8 +61,9 @@ if(isset($_POST['stuname']) && isset($_POST['stuemail']) && isset($_POST['stupas
             exit();
         }
     }
-}
+}   
 
+if(!isset($_SESSION['is_login'])){
 if(isset($_POST['checkLogEmail']) && isset($_POST['stuLogEmail']) && isset($_POST['stuLogPass'])){
     $stuemail = $_POST['stuLogEmail'];
     $stupass = $_POST['stuLogPass'];
@@ -66,9 +73,18 @@ if(isset($_POST['checkLogEmail']) && isset($_POST['stuLogEmail']) && isset($_POS
 
     if ($result->num_rows > 0) {
         $response = ["status" => "OK"];
+        $_SESSION['is_login'] = true;
+        $_SESSION['stuLogEmail'] = $stuemail;
         echo json_encode($response);
+
         exit();
-    } else {
+    }else if($result->num_rows == 0){
+        $response = ["error" => "Not Found"];
+        echo json_encode($response);
+        $conn->close();
+        exit();
+    } 
+    else {
         $response = ["error" => "Invalid"];
         echo json_encode($response);
         $conn->close();
@@ -80,4 +96,6 @@ if(isset($_POST['checkLogEmail']) && isset($_POST['stuLogEmail']) && isset($_POS
     $conn->close();
     exit();
 }
+}
+
 ?>
