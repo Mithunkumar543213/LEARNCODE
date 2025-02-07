@@ -23,10 +23,8 @@ function adminLogInCheck(){
         success: function (data) {
             console.log(data);
             if (data.error == "Invalid") {
-                console.log("1");
                 $("#adminMsg").html('<span class="alert alert-danger">Invalid email or password!</span>');
             } else if (data.status == "OK") {
-                console.log("2");
                 console.log(data.status)
                 $("#adminMsg").html("<span class='spinner-border text-success'></span>");
                 setTimeout(() => {
@@ -35,14 +33,14 @@ function adminLogInCheck(){
                 
             }
             else if (data.error=="Fill All Field") {
-                console.log("5");
                 $("#adminMsg").html('<span class="alert alert-danger">All Fields Required </span>');
             }else if (data.error=="Not Found") {
-                console.log("4");
                 $("#adminMsg").html('<span class="alert alert-danger">User Not Found </span>');
             }else if (data.error=="Already Logged In") {
-                console.log("4");
                 $("#adminMsg").html('<span class="alert alert-danger">Already Logged In</span>');
+                setTimeout(() => {
+                    window.location.href = "Admin/adminDashbord.php";
+                }, 500);
             }                                             
         },
         error: function (jqXHR, textStatus, errorThrown) {

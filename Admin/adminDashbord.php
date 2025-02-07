@@ -15,7 +15,7 @@
     <div class="d-flex">
         <!-- Sidebar start-->
          <?php
-         require("adminSideBar.php");
+         require("adminComponents/adminSideBar.php");
          
          ?>
          <!-- Sidebar start-->
@@ -47,41 +47,25 @@
                 </div>
             </div>
 
-            <div class="mt-4">
-                <h4>Course Ordered</h4>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Order ID</th>
-                            <th>Course ID</th>
-                            <th>Student Email</th>
-                            <th>Order Date</th>
-                            <th>Amount</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ORDS98956453</td>
-                            <td>10</td>
-                            <td>ant@example.com</td>
-                            <td>2019-09-12</td>
-                            <td>800</td>
-                            <td><button class="btn btn-danger">🗑️</button></td>
-                        </tr>
-                        <tr>
-                            <td>ORDS57717951</td>
-                            <td>14</td>
-                            <td>jay@ischool.com</td>
-                            <td>2019-09-13</td>
-                            <td>400</td>
-                            <td><button class="btn btn-danger">🗑️</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <!-- courses start from here -->
+             <?php
+             require("adminComponents/coursesList.php");
+             ?>
+
+
+
         </div>
     </div>
+
+
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/proper.min.js"></script>
+<script src="js/all.min.js"></script>
+<script src="js/ajaxRequest.js"></script>
+<script src="js/adminAjaxRequest.js"></script>
+
     
 </body>
 </html>
